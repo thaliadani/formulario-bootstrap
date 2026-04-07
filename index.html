@@ -16,144 +16,27 @@
         </div>
     </nav>
 
+    <div class="container mt-4 d-flex justify-content-center flex-column flex-md-row">
+        <a href="./criar-prontuario.html" class="btn btn-primary">Novo Prontuário</a>
+    </div>
+
     <div class="container mt-4">
-        <form class="needs-validation" novalidate>
-            <div class="card mb-4">
-                <div class="card-header bg-info text-white text-center">
-                    Dados do Paciente
-                </div>
 
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6 mb-3 ">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="nome" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe o nome do paciente.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="idade" class="form-label">Idade</label>
-                            <input type="number" class="form-control" id="idade" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe a idade do paciente.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="sexo" class="form-label">Sexo</label>
-
-                            <select name="sexo" id="sexo" class="form-control form-select" required>
-                                <option value="">Selecione</option>
-                                <option value="masculino">Masculino</option>
-                                <option value="feminino">Feminino</option>
-                            </select>
-                            <div class="invalid-feedback">
-                                Por favor, informe o sexo do paciente.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-header bg-info text-white text-center">
-                    Sinais Vitais
-                </div>
-
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-3 mb-3">
-                            <label for="pressao" class="form-label">Pressão Arterial</label>
-                            <input type="text" class="form-control" id="pressao" placeholder="Ex: 120/80" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe a pressão arterial do paciente.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="temperatura" class="form-label">Temperatura</label>
-                            <div class="input-group">
-                                <input type="number" class="form-control" id="temperatura" step="0.1"
-                                    placeholder="Ex: 36.5" required>
-                                <span class="input-group-text">°C</span>
-
-                                 <div class="invalid-feedback">
-                                Por favor, informe a temperatura do paciente.
-                            </div>
-                            </div>
-                           
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="frequencia" class="form-label">Frequência Cardíaca</label>
-                            <input type="number" class="form-control" id="frequencia" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe a frequência cardíaca do paciente.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="saturacao" class="form-label">Saturação</label>
-                            <div class="input-group">
-                                <input type="number" class="form-control" id="saturacao" step="0.1" placeholder="Ex: 95"
-                                    required>
-                                <span class="input-group-text">%</span>
-                                <div class="invalid-feedback">
-                                    Por favor, informe a saturação do paciente.
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-header bg-info text-white text-center">
-                    Evolução do Paciente
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div>
-                            <label for="evolucao" class="form-label">Descreva a evolução</label>
-                            <textarea class="form-control" id="evolucao" rows="3"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-4">
-                <div class="card-header bg-info text-white text-center">
-                    Medicação
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="medicacao" class="form-label">Medicamento</label>
-                            <input type="text" class="form-control" id="medicacao" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe o medicamento.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="dose" class="form-label">Dosagem</label>
-                            <input type="text" class="form-control" id="dose" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe a dosagem do medicamento.
-                            </div>
-                        </div>
-                        <div class="col-md-3 mb-3">
-                            <label for="horario" class="form-label">Horário</label>
-                            <input type="time" class="form-control" id="horario" required>
-                            <div class="invalid-feedback">
-                                Por favor, informe o horário da administração do medicamento.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-end mb-5">
-                <button class="btn btn-primary" type="submit">Salvar Prontuário</button>
-            </div>
-        </form>
+        <table class="table table-striped text-center">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Sexo</th>
+                    <th scope="col">Visualizar</th>
+                </tr>
+            </thead>
+            <tbody id="prontuarios-tabela-corpo">
+                <tr>
+                    <td colspan="4">Nenhum prontuário carregado.</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <script src="./script.js"></script>
