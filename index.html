@@ -12,33 +12,165 @@
 <body>
     <nav class="navbar navbar-dark bg-primary">
         <div class="container-fluid justify-content-center">
-            <span class="navbar-brand mb-0 h1">Prontuário Eletrônico</span>
+            <span class="navbar-brand mb-0 h1">Criar Prontuário </span>
         </div>
     </nav>
 
-    <div class="container mt-4 d-flex justify-content-center flex-column flex-md-row">
-        <a href="./criar-prontuario.html" class="btn btn-primary">Novo Prontuário</a>
-    </div>
-
     <div class="container mt-4">
+        <form class="needs-validation" novalidate>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-info text-white text-center">
+                    Dados do Paciente
+                </div>
 
-        <table class="table table-striped text-center">
-            <thead>
-                <tr>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Idade</th>
-                    <th scope="col">Sexo</th>
-                    <th scope="col">Visualizar</th>
-                </tr>
-            </thead>
-            <tbody id="prontuarios-tabela-corpo">
-                <tr>
-                    <td colspan="4">Nenhum prontuário carregado.</td>
-                </tr>
-            </tbody>
-        </table>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3 ">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe o nome do paciente.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="idade" class="form-label">Idade</label>
+                            <input type="number" class="form-control" id="idade" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe a idade do paciente.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="sexo" class="form-label">Sexo</label>
+
+                            <select name="sexo" id="sexo" class="form-control form-select" required>
+                                <option value="">Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, informe o sexo do paciente.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-info text-white text-center">
+                    Sinais Vitais
+                </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <label for="pressao" class="form-label">Pressão Arterial</label>
+                            <input type="text" class="form-control" id="pressao" placeholder="Ex: 120/80" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe a pressão arterial do paciente.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="temperatura" class="form-label">Temperatura</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="temperatura" step="0.1"
+                                    placeholder="Ex: 36.5" required>
+                                <span class="input-group-text">°C</span>
+
+                                <div class="invalid-feedback">
+                                    Por favor, informe a temperatura do paciente.
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="frequencia" class="form-label">Frequência Cardíaca</label>
+                            <input type="number" class="form-control" id="frequencia" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe a frequência cardíaca do paciente.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="saturacao" class="form-label">Saturação</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="saturacao" step="0.1" placeholder="Ex: 95"
+                                    required>
+                                <span class="input-group-text">%</span>
+                                <div class="invalid-feedback">
+                                    Por favor, informe a saturação do paciente.
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-info text-white text-center">
+                    Evolução do Paciente
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div>
+                            <label for="evolucao" class="form-label">Descreva a evolução</label>
+                            <textarea class="form-control" id="evolucao" rows="3" id="evolucao"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-info text-white text-center">
+                    Medicação
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="medicacao" class="form-label">Medicamento</label>
+                            <input type="text" class="form-control" id="medicamento" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe o medicamento.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="dose" class="form-label">Dosagem</label>
+                            <input type="text" class="form-control" id="dosagem" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe a dosagem do medicamento.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="horario" class="form-label">Horário</label>
+                            <input type="time" class="form-control" id="horario" required>
+                            <div class="invalid-feedback">
+                                Por favor, informe o horário da administração do medicamento.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-end mb-5">
+                <button class="btn btn-primary" type="submit">Salvar Prontuário</button>
+            </div>
+        </form>
+    </div>
+  
+    <div class="toast position-fixed bottom-0 end-0 p-3" id="toastSucesso">
+        <div class="toast-header">
+            <strong class="me-auto">Sistema</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Prontuário salvo com sucesso!
+        </div>
     </div>
 
+    <div id="resultado" class="alert alert-secondary d-none text-center w-50"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script src="./script.js"></script>
 </body>
 
