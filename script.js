@@ -38,7 +38,6 @@ function mostrarDados() {
 
   const forms = document.querySelectorAll('.needs-validation')
   const toast = new bootstrap.Toast(document.getElementById('toastSucesso'));
-  const inputs = document.querySelectorAll('input');
 
   // Loop over them and prevent submission
   Array.from(forms).forEach(form => {
@@ -49,7 +48,6 @@ function mostrarDados() {
 
       } else {
         event.preventDefault();
-        inputs.res
         //Mensagem de sucesso
         toast.show();
         mostrarDados();
