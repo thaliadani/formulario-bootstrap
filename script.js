@@ -32,7 +32,7 @@ function mostrarDados() {
   caixa.classList.remove("d-none");
 }
 
-// Validação do Prontário
+// Validação do Prontuário
 (() => {
   'use strict'
 
@@ -48,8 +48,10 @@ function mostrarDados() {
 
       } else {
         event.preventDefault();
-        //Mensagem de sucesso
+        //Mensagem de sucesso 
         toast.show();
+
+        //Mostrar os dados digitados
         mostrarDados();
       }
       form.classList.add('was-validated');
