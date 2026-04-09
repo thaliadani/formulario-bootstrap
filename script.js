@@ -24,7 +24,7 @@ function mostrarDados() {
     Evolução: ${evolucao} <br>
     Medicamento: ${medicamento} <br>
     Dosagem: ${dosagem} <br>
-    Horário:${horario}
+    Horário: ${horario}
 `;
 
   let caixa = document.getElementById("resultado");
