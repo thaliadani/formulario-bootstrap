@@ -72,6 +72,20 @@ function mostrarDados() {
 
 })();
 
+// Modo Escuro
+const btnModoEscuro = document.getElementById('modoEscuro');
+const html = document.documentElement;
+
+btnModoEscuro.addEventListener('click', () => {
+  if (html.getAttribute('data-bs-theme') === 'light') {
+    html.setAttribute('data-bs-theme', 'dark');
+    btnModoEscuro.innerHTML = '<i class="bi bi-sun-fill"></i>';
+  } else {
+    html.setAttribute('data-bs-theme', 'light');
+    btnModoEscuro.innerHTML = '<i class="bi bi-moon-fill"></i>';
+  }
+});
+
 
 
 

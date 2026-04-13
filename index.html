@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -11,24 +11,28 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid justify-content-center">
+    <nav class="navbar navbar-dark bg-primary">
+        <div class="container-fluid justify-content-center user-select-none">
             <i class="bi bi-hospital pe-2 text-white"></i>
-            <h1 class="navbar-brand mb-0">Prontuário Eletrônico</h1>
+            <h1 class="navbar-brand mb-0 ">Prontuário Eletrônico</h1>
+        </div>
+
+        <div class="position-absolute top-0 end-0 p-1">
+            <button class="btn btn-dark text-white" type="button" id="modoEscuro"><i class="bi bi-moon-fill"></i></button>
         </div>
     </nav>
 
     <div class="container mt-4">
         <form class="needs-validation" novalidate>
-            <div class="card mb-4 shadow-sm rounded-4">
-                <div class="card-header bg-primary text-white text-center fw-bold">
+            <div class="card mb-4 shadow-sm rounded-4 border-0">
+                <div class="card-header bg-primary text-white text-center fw-bold user-select-none rounded-top-4">
                     <i class="bi bi-person pe-2 text-white"></i>
                     Dados do Paciente
                 </div>
 
-                <div class="card-body">
+                <div class="card-body border border-primary rounded-bottom-4 border-top-0">
                     <div class="row">
-                        <div class="col-md-6 mb-3 ">
+                        <div class="col-md-6 mb-3">
                             <label for="nome" class="form-label col-form-label">Nome</label>
                             <input type="text" class="form-control " id="nome" required>
                             <div class="invalid-feedback">
@@ -58,13 +62,13 @@
                 </div>
             </div>
 
-            <div class="card mb-4 shadow-sm rounded-4">
-                <div class="card-header bg-primary text-white text-center fw-bold">
+            <div class="card mb-4 shadow-sm rounded-4 border-0">
+                <div class="card-header bg-primary text-white text-center fw-bold user-select-none rounded-top-4">
                     <i class="bi bi-heart-pulse pe-2 text-white"></i>
                     Sinais Vitais
                 </div>
 
-                <div class="card-body">
+                <div class="card-body border border-primary rounded-bottom-4 border-top-0">
                     <div class="row">
                         <div class="col-md-3 mb-3">
                             <label for="pressao" class="form-label col-form-label">Pressão Arterial</label>
@@ -110,12 +114,12 @@
                 </div>
             </div>
 
-            <div class="card mb-4 shadow-sm rounded-4">
-                <div class="card-header bg-primary text-white text-center fw-bold">
+            <div class="card mb-4 shadow-sm rounded-4 border-0">
+                <div class="card-header bg-primary text-white text-center fw-bold user-select-none rounded-top-4">
                     <i class="bi bi-journal-text pe-2 text-white"></i>
                     Evolução do Paciente
                 </div>
-                <div class="card-body">
+                <div class="card-body border border-primary rounded-bottom-4 border-top-0">
                     <div class="row">
                         <div class="col-md-12 mb-3">
                             <label for="evolucao" class="form-label col-form-label">Descreva a evolução</label>
@@ -125,12 +129,12 @@
                 </div>
             </div>
 
-            <div class="card mb-4 shadow-sm rounded-4">
-                <div class="card-header bg-primary text-white text-center fw-bold">
+            <div class="card mb-4 shadow-sm rounded-4 border-0">
+                <div class="card-header bg-primary text-white text-center fw-bold user-select-none rounded-top-4">
                     <i class="bi bi-capsule pe-2 text-white"></i>
                     Medicação
                 </div>
-                <div class="card-body">
+                <div class="card-body border border-primary rounded-bottom-4 border-top-0">
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="medicacao" class="form-label col-form-label">Medicamento</label>
@@ -164,7 +168,7 @@
         </form>
     </div>
 
-    <div class="container">
+    <div class="container user-select-none">
         <div id="resultado" class="card shadow d-none text-center mb-5">
             <div class="card-header bg-dark text-white">
                 Resultado do Prontuário
@@ -173,7 +177,7 @@
         </div>
     </div>
 
-    <div class="toast position-fixed bottom-0 end-0 p-3" id="toastSucesso">
+    <div class="toast position-fixed bottom-0 end-0 p-3 user-select-none" id="toastSucesso">
         <div class="toast-header">
             <strong class="me-auto">Sistema</strong>
             <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
