@@ -1,4 +1,4 @@
-//Mostrar os dados digitados do prontuário
+//Mostrar os dados digitados do formulário
 function mostrarDados() {
 
   // Pegar os dados digitados no formulário
@@ -14,7 +14,7 @@ function mostrarDados() {
   let dosagem = document.getElementById("dosagem").value;
   let horario = document.getElementById("horario").value;
 
-  // Criar no html os dados digitados
+  // Criar uma estrutura html com os dados digitados
   let resultado = `
     <ul class="list-group text-start">
       <li class="list-group-item"><strong>Nome:</strong> ${nome}</li>
@@ -30,9 +30,9 @@ function mostrarDados() {
       <li class="list-group-item"><strong>Horário:</strong> ${horario}</li>
     </ul>
 `;
-
-  // Mostrar os dados no html
   let caixa = document.getElementById("resultado");
+
+  // Mostrar a estrutura html criada na tela
   caixa.querySelector(".card-body").innerHTML = resultado;
   caixa.classList.remove("d-none");
 }
@@ -42,6 +42,7 @@ function mostrarDados() {
   'use strict'
 
   const forms = document.querySelectorAll('.needs-validation')
+  // Instância do Toast do Bootstrap para exibir a mensagem de sucesso
   const toast = new bootstrap.Toast(document.getElementById('toastSucesso'));
 
   // Loop para validar os campos do formulário
@@ -52,13 +53,13 @@ function mostrarDados() {
         // Impedir o envio do formulário
         event.preventDefault();
 
-        // Impedir a propagação padrão do evento
+        // Impedir a propagação do evento para outros elementos
         event.stopPropagation();
 
       } else {
         event.preventDefault();
 
-        //Mensagem de sucesso 
+        //Mensagem de salvo com sucesso 
         toast.show();
 
         mostrarDados();
